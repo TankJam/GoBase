@@ -53,7 +53,7 @@ func main() {
 	}
 	fmt.Println("------------------------------------------------------")
 
-	// 键值循环
+	// 3.键值循环
 	// for range(键值)  返回下标与值
 
 	// 字符串
@@ -123,4 +123,52 @@ func main() {
 		fmt.Println(v)
 	}
 
+	// 4.switch case
+	switch n := 7; n {
+	case 1, 3, 5, 7, 9:
+		fmt.Println("奇数...")
+	case 2, 4, 6, 8, 10:
+		fmt.Println("偶数...")
+	default:
+		fmt.Println("奇怪的数字，不是奇数也不是偶数! ")
+	}
+
+	// 5.goto(跳转到指定标签) 用于退出多层循环
+	i := 1
+	for i < 10 {
+		fmt.Println(i)
+		i2 := 1
+		for i2 < 10 {
+			fmt.Println(i2)
+			i3 := 1
+			for i3 < 10 {
+				fmt.Println(i3)
+				if i3 == 3 {
+					goto BreakTag // 跳到BreakTag标签，退出循环
+				}
+				i3++
+			}
+			i2++
+		}
+		i++
+	}
+
+	// 拟定一个可以被 goto 的标签，可以退出多层循环
+BreakTag:
+	fmt.Println("退出多层循环!")
+
+	// 6.break
+BreakFlag: // 可以允许被break调用的退出循环
+	for i := 0; i < 10; i++ {
+		for j := 0; j < 10; j++ {
+			for l := 0; l < 10; l++ {
+				fmt.Println(l, j, i)
+				if i == 2 {
+					break BreakFlag // 退出多层循环
+				}
+			}
+		}
+	}
+
+	// 7.continue 略
 }
