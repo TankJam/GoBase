@@ -45,4 +45,41 @@ func main() {
 		}
 		fmt.Println("========")
 	}
+
+	// 5.数组比较
+	f := [...]int{1, 2, 3}
+	g := [...]int{1, 2, 4}
+	// 相同长度的数组才能进行比较
+	println(f == g)
+
+	// 6.作业
+	// 求数组[1, 3, 5, 7, 8]所有元素的和
+	ararrys2 := [...]int{1, 3, 5, 7, 9}
+	number := 0
+	for _, v := range ararrys2 {
+		number += v
+	}
+	fmt.Println(number)
+
+	// 找出数组中和为指定值的两个元素的下标，
+	// 比如从数组[1, 3, 5, 7, 8]中找出和为8的两个元素的下标分别为(0,3)和(1,2)。
+	// leetcode 第一题算法题  []空数组就是切片  冒泡的方式去一一比较
+	ararrys3 := [...]int{1, 3, 5, 7, 8}
+	indexArrary := []string{}
+	length := len(ararrys3)
+	for index, value := range ararrys3 {
+		i := index + 1
+		for i < length {
+			// 如果两个值相加等于8得或者这两个元素的下标
+			if (value + ararrys3[i]) == 8 {
+				str := fmt.Sprintf("(%d,%d)", index, i)
+
+				// 切记，追加切片必须要在新的切片后面加 ...
+				indexArrary = append(indexArrary, str)
+			}
+			i++
+		}
+		length--
+	}
+	fmt.Println(indexArrary)
 }
