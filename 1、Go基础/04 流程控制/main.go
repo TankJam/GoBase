@@ -70,16 +70,16 @@ func main() {
 
 	fmt.Println("------------------------------------------------------")
 
-	// 数组  值传递
+	// 数组 array  值传递
 	// 指定创建的长度
-	ararrys := [4]int{1, 2, 3, 4}
-	for _, value := range ararrys {
+	arrays := [4]int{1, 2, 3, 4}
+	for _, value := range arrays {
 		fmt.Println(value)
 	}
 
 	fmt.Println("------------------------------------------------------")
 
-	// 切片  引用传递
+	// 切片 slice 引用传递
 	// 无需指定长度，因为是指针，可以根据切片的值进行扩减
 	var slice []int = []int{1, 2, 3, 4}
 	for _, value := range slice {

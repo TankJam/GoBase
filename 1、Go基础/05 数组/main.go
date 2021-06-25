@@ -22,8 +22,8 @@ func main() {
 	fmt.Println(c)
 
 	// 3.遍历数组
-	var ararrys = [...]string{"tank", "广东", "大帅哥", "喜欢哈哈哈哈哈"}
-	for _, v := range ararrys {
+	var arrays = [...]string{"tank", "广东", "大帅哥", "喜欢哈哈哈哈哈"}
+	for _, v := range arrays {
 		fmt.Println(v)
 	}
 
@@ -54,9 +54,9 @@ func main() {
 
 	// 6.作业
 	// 求数组[1, 3, 5, 7, 8]所有元素的和
-	ararrys2 := [...]int{1, 3, 5, 7, 9}
+	arrays2 := [...]int{1, 3, 5, 7, 9}
 	number := 0
-	for _, v := range ararrys2 {
+	for _, v := range arrays2 {
 		number += v
 	}
 	fmt.Println(number)
@@ -64,22 +64,22 @@ func main() {
 	// 找出数组中和为指定值的两个元素的下标，
 	// 比如从数组[1, 3, 5, 7, 8]中找出和为8的两个元素的下标分别为(0,3)和(1,2)。
 	// leetcode 第一题算法题  []空数组就是切片  冒泡的方式去一一比较
-	ararrys3 := [...]int{1, 3, 5, 7, 8}
-	indexArrary := []string{}
-	length := len(ararrys3)
-	for index, value := range ararrys3 {
+	arrays3 := [...]int{1, 3, 5, 7, 8}
+	indexArray := []string{}
+	length := len(arrays3)
+	for index, value := range arrays3 {
 		i := index + 1
 		for i < length {
 			// 如果两个值相加等于8得或者这两个元素的下标
-			if (value + ararrys3[i]) == 8 {
+			if (value + arrays3[i]) == 8 {
 				str := fmt.Sprintf("(%d,%d)", index, i)
 
 				// 切记，追加切片必须要在新的切片后面加 ...
-				indexArrary = append(indexArrary, str)
+				indexArray = append(indexArray, str)
 			}
 			i++
 		}
 		length--
 	}
-	fmt.Println(indexArrary)
+	fmt.Println(indexArray)
 }

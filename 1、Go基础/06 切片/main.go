@@ -202,6 +202,8 @@ func main() {
 	}
 
 	/// 11.2 请使用内置函数sort对以下数组进行排序;
-	var a = [...]int{3, 7, 8, 9, 1}
-	a = sort.Sort()
+	var s15 = [...]int{3, 7, 8, 9, 1}
+	fmt.Println(s15)
+	sort.Ints(s15[:])  // 只能对切片进行排序
+	fmt.Println(s15)
 }
