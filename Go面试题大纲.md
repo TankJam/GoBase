@@ -81,8 +81,8 @@ Redis面试题
 		- 2.日志的全链路追踪 就是从amp获取到teacei塞进context里面 函数的第一个参数一定要传context这个参数就行了 
 		- 3.取消上下文 设置超时时间
 	15、数组和切片的区别？
-				数组是定长的  切片是可以扩容的  然后讲下切片的扩容机制  最后在讲下数据底层怎么实现扩容的  
-  16、Map当函数的参数传入，并且函数内修改map的值，外面的map是原来的还是会改变？
+ 				数组是定长的  切片是可以扩容的  然后讲下切片的扩容机制  最后在讲下数据底层怎么实现扩容的  
+  	16、Map当函数的参数传入，并且函数内修改map的值，外面的map是原来的还是会改变？
    			外边的map数据会发生变化，因为在golang中 所有都是值传递，map会改变是因为map底层有个makemap这个方法 这个方法的返回值是map的指针
 	17、切片当函数参数传入会发生什么？
         不会对外部的切片产生影响还是原值，函数内部会改变，因为golang都是值传递
@@ -97,6 +97,31 @@ Redis面试题
     	具体要看结构体里面的类型 如果空结构体占用字节为0
 	21、atomic.value 自行百度 很重要
 
+*/
+
+// 得物面试题
+/*
+	1.GC
+	2.内存管理
+	3.GPM模型
+	4.channel底层
+	5.context底层
+	6.slice底层，如何实现扩容
+	7.redis
+		- 大key如何处理
+		- 热key如何处理
+		- skiplist原理
+		- ziplist原理
+		- zset底层
+	8.粉丝如何查看关注的大V消息，redis如何实现？
+	9.多个用户共同关注的到大V，redis如何实现？
+	10.联合索引底层
+	11.sql优化
+	12.mysql底层
+	13.索引的数据结构与实现原理
+	14.b+树
+	15.红黑树
+	16.分布式事务场景，有没有用过，然后延申问一些问题
 */
 
 // 2.Go面试题链接
@@ -312,7 +337,7 @@ Day3 实战篇：MySQL分库分表综合实战
 
 
 
-## 你为什么离开你上一家公司
+你为什么离开你上一家公司
 
 ```python
 # 严禁回答: 工资低, 与同事有矛盾,           
@@ -325,9 +350,24 @@ Day3 实战篇：MySQL分库分表综合实战
 
 
 
+# 英特尔
+
+```python
+'''
+-------- 1、一面 ---------
+1.Python基础、进程线程协程、GIL、魔法方法、元类、单例模式、设计模式
+2.Go基础、make与new、slice与array、map，指针、结构体、接口、动态语言与静态语言的区别，GMP模型、channel原理、goroutine原理、contenxt原理
+3.jenkins、git、cicd、docker、k8s、mongodb、ansible、pytest、linux指令和常用编辑器，比如vim的用法
+
+-------- 2、二面 ---------
+可能会问一些python的os.environ配置环境变量，或者docker这些搭建网络环境配置这些配置问题
+
+-------- 3、三面 ---------
+最后一轮的应该很看重沟通能力， 他不看重技术，沟通就是要把自己的项目的每个角落了解清楚，他会看介绍项目的时候能不能让他理解
+'''
+```
 
 
-![l14dd81908b191f4deac02c774ead3730-s-mca796c3b35fd08a8eaf3de6e477ece30](/Users/tank/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/e096ae970eb4892333f77d2ad91b8f70/Favorites/data/l14dd81908b191f4deac02c774ead3730-s-mca796c3b35fd08a8eaf3de6e477ece30.jpg)
 
 
 
