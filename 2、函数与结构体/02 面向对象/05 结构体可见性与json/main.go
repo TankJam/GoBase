@@ -28,7 +28,8 @@ func initStudent(id int, name string) *student{
 type class struct{
 	Title string `json:"title"`  // json的字段key
 	// 数组中存对象
-	Students []student `json:"student_array" db:"student" xml:"ss"`
+	/// 注意: 反序列化时，json的key必须要与json: "字段名" 一一对应
+	Students []student `json:"studentArrays" db:"student" xml:"ss"`
 }
 
 // class构造函数
@@ -67,5 +68,17 @@ func main() {
 	// 4.反序列化 json.Unmarshal([]uint8, 结构体指针)
 	/// 需要反序列化的json数据
 	/// Go语言中json数据用 `{key:value}` 表示
+	jsonStr := `{"Title":"火箭101","studentArrays":[{"Id":0,"Name":"stu00"},{"Id":1,"Name":"stu01"},{"Id":2,"Name":"stu02"},{"Id":3,"Name":"stu03"},{"Id":4,"Name":"stu04"},{"Id":5,"Name":"stu05"},{"Id":6,"Name":"stu06"},{"Id":7,"Name":"stu07"},{"Id":8,"Name":"stu08"},{"Id":9,"Name":"stu09"}]}`
+	/// 1) 先实例化反序列化后映射的空结构体
+	var c2 class // 用于接收反序列化后的结果
+	/// 2) 将json数据先转为bytes类型的数据，然后传给c2指针
+	err = json.Unmarshal([]byte(jsonStr), &c2)  // &c2 接收者可以将bytes数据传给指针
+	if err != nil{
+		fmt.Println("json unmarshal failed, err:", err)
+		return
+	}
+
+	fmt.Printf("%#v\n", c2)
+	fmt.Println(c2)
 
 }
