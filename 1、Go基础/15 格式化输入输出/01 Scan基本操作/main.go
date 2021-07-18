@@ -28,7 +28,6 @@ func main() {
 
 	fmt.Println("请输入名字: ")
 	fmt.Scanln(&name)  // 一次只能扫描一个变量
-
 	fmt.Println("请输入年龄: ")
 	fmt.Scanln(&age)  // 一次只能扫描一个变量
 
