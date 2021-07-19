@@ -24,5 +24,5 @@ func readFile(filename string){
 
 
 func main() {
-	readFile("./5、文件处理/01 文本读写/03 os与ioutil操作/xx.txt")
+	readFile("./4、文件处理/01 文本读写/03 os与ioutil操作/xx.txt")
 }

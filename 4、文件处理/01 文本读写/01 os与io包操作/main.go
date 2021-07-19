@@ -16,7 +16,7 @@ import (
 func main() {
 	//// 路径: './xx.txt'
 	////file, err := os.Open("./xx.txt")
-	//file, err := os.Open("./5、文件处理/01 文本读写/01 打开与关闭文件/xx.txt")
+	//file, err := os.Open("./4、文件处理/01 文本读写/01 打开与关闭文件/xx.txt")
 	//if err != nil{
 	//	fmt.Println("open file failed, err: ", err)
 	//	return
@@ -42,7 +42,7 @@ func main() {
 	//	fmt.Println(string(tmp[:]))
 	//}
 
-	fileObj, err := os.Open("./5、文件处理/01 文本读写/01 os与io包操作/xx.txt")
+	fileObj, err := os.Open("./4、文件处理/01 文本读写/01 os与io包操作/xx.txt")
 	if err != nil{
 		fmt.Println("open file failed, err: ", err)
 		return

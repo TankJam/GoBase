@@ -13,7 +13,7 @@ import (
 
 //readByLine bufio读数据
 func readByLine(){
-	file, err := os.Open("./5、文件处理/01 文本读写/02 os与bufio包操作/xx.txt")
+	file, err := os.Open("./4、文件处理/01 文本读写/02 os与bufio包操作/xx.txt")
 	if err != nil{
 		fmt.Println("open file failed, err: ", err)
 		return

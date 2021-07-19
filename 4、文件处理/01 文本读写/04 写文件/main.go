@@ -13,7 +13,7 @@ import (
 
 func main() {
 	// O_APPEND 追加   O_WRONLY 支持写   O_CREATE 创建
-	file, err := os.OpenFile("./5、文件处理/01 文本读写/04 写文件/xx.txt", os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0755)
+	file, err := os.OpenFile("./4、文件处理/01 文本读写/04 写文件/xx.txt", os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0755)
 	if err != nil{
 		fmt.Println("open file failed, err: ", err)
 		return
