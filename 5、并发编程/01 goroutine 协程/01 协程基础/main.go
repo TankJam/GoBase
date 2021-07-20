@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"sync"
 )
 
@@ -22,6 +23,9 @@ func hello(i int){
 
 func main() {
 	defer fmt.Println("哈哈哈 结束啦")
+
+	// 设置GMP协程的 CPU 核数  m:n  10:2  10个任务2个CPU来处理
+	runtime.GOMAXPROCS(1)  // 设置只使用1核来处理
 
 	// 初始化计数器的值为10，可以允许10个协程执行
 	wg.Add(10)  // 计数器 + 10
