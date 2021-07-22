@@ -49,6 +49,10 @@ import (
 
 // --------------- sync.Map{} ---------------
 var m = sync.Map{}
+/*
+	m.Store  添加键值对
+	m.Load   根据key取值
+*/
 
 func tickDemo(){
 	ticker := time.Tick(time.Second)  // 定义一个1秒间隔的定时器
